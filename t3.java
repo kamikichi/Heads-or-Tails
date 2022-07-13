@@ -7,8 +7,12 @@ public static void main(String[] args) {
     int cnt = 0;
     int x=0;
     int heads = 0;
-    
+    Scanner sc = new Scanner(System.in);
     Random rnd = new Random();
+    System.out.println("Who are you?");
+    System.out.print(">");
+    String name = sc.next();
+    System.out.println("Hello, "+name+"!");
     System.out.println("Tossing a coin...");
     while(cnt<3){
         System.out.print("Round "+(cnt+1)+":");
@@ -25,8 +29,8 @@ public static void main(String[] args) {
 
     }
     System.out.println("Heads: "+i+",Tails:"+j+"");
-    if(i>j) System.out.println("You won");
-    if(i<j) System.out.println("You lost");
+    if(i>j) System.out.println(""+name+" won!");
+    if(i<j) System.out.println(""+name+" lost");
 }
 }
 
